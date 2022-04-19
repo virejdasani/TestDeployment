@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0A0F17;
+  color: #fff;
+}
+
+
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  width: 100%;
+  object-fit: contain;
+  min-width: 400px;
+  /* horizontally centered */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.intro h1 {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4vw;
+
+}
+
+.wave {
+  animation-name: wave-animation;
+  /* Change to speed up or slow down */
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  font-size: 4vw;
+  padding: 10px;
+
+}
+
+section {
+  height: 100vh;
+  color: white;
+}
+
+section h1 {
+  padding-top: 300px;
+  text-align: center;
+  font-size: 5rem;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+#navbar {
+  background: rgba(45, 45, 45, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  /* To make sure it is on top of any other content */
+  z-index: 100;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+}
+
+#navbar a:hover {
+  background-color: rgb(71, 71, 71);
+}
+
+/* For width < 399 */
+@media only screen and (max-width: 399px) {
+  #navbar a {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}
+
+/* For width 400+ */
+@media only screen and (min-width: 400px) {
+  #navbar a {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
